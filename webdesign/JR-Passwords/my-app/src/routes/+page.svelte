@@ -1,3 +1,14 @@
+
+<style>
+    #login-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+    }
+</style>
+
+
 <body>
     <div id="login-container">
         <h2>Login</h2>
@@ -10,9 +21,15 @@
                 <label for="password">Password:</label><br>
                 <input type="password" id="password" name="password"><br><br>
             </div>
-            <button type="submit">Submit</button>
+            <button on:click={changeStatus} type="submit">{buttonStatus}</button>
         </form>
     </div>
 </body>
 
+<script>
+    let buttonStatus = "Submit";
 
+    function changeStatus(){
+        let buttonStatus = "Success"
+    }
+</script>
