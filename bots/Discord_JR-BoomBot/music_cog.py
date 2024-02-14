@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-from youtube_dl import YoutubeDL
+import yt_dlp as youtube_dl
 
 class music_cog(commands.Cog):
     def __init__(self, bot):
