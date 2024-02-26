@@ -1,35 +1,19 @@
-
 <style>
-    #login-container{
+    body{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 50px;
     }
 </style>
 
 
 <body>
-    <div id="login-container">
-        <h2>Login</h2>
-        <form action=" " method="POST">
-            <div class="login-group">
-                <label for="username">Username:</label><br>
-                <input type="text" id="username" name="username" required><br>
-            </div>
-            <div class="login-group">
-                <label for="password">Password:</label><br>
-                <input type="password" id="password" name="password"><br><br>
-            </div>
-            <button on:click={changeStatus} type="submit">{buttonStatus}</button>
-        </form>
-    </div>
+    <h2>Welcome to JR-Passwords</h2>
+    <p>Would you like to log in or create a new user?</p>
+    <a href="login.svelte">
+        <button>Log in</button>
+    </a>
+    <a href=" ">
+        <button>Create new user</button>
+    </a>
 </body>
-
-<script>
-    let buttonStatus = "Submit";
-
-    function changeStatus(){
-        let buttonStatus = "Success"
-    }
-</script>
