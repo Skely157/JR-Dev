@@ -10,10 +10,11 @@
 <body>
     <h2>Welcome to JR-Passwords</h2>
     <p>Would you like to log in or create a new user?</p>
-    <a href="login.svelte">
+    <a href="/login">
         <button>Log in</button>
     </a>
-    <a href=" ">
+    <br>
+    <a href="/newuser ">
         <button>Create new user</button>
     </a>
 </body>

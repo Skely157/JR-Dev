@@ -1,5 +1,5 @@
 <style>
-    #login-container{
+    #create-container{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -9,27 +9,18 @@
 
 
 <body>
-    <div id="login-container">
-        <h2>Login</h2>
-        <form action="changeStatus()" method="POST">
-            <div class="login-group">
+    <div id="create-container">
+        <h2>Create new user</h2>
+        <form action="/newuser/success">
+            <div class="info-group">
                 <label for="username">Username:</label><br>
                 <input type="text" id="username" name="username" required><br>
             </div>
-            <div class="login-group">
+            <div class="info-group">
                 <label for="password">Password:</label><br>
                 <input type="password" id="password" name="password" required><br><br>
             </div>
-            <button type="submit">{buttonStatus}</button>
+            <button type="submit">Submit</button>
         </form>
     </div>
 </body>
-
-<script>
-    let buttonStatus = "Submit";
-
-    function changeStatus(){
-        let buttonStatus = "Success"
-        return
-    }
-</script>
