@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 
+from yt_dlp import YoutubeDL
+
 import yt_dlp as youtube_dl
 
 class music_cog(commands.Cog):
@@ -11,15 +13,16 @@ class music_cog(commands.Cog):
         self.is_paused = False
 
         self.music_queue = []
-        self.YDL_OPTIONS = {"format": "bestaudio", "noplaylist": "True"}
+        self.YDL_OPTIONS = {"format": "bestaudio", "postprocessors": [{"key": "FFmpegExtractAudio", "preferredcodec": "mp3", "preferredquality": "192",}]}
         self.FFMPEG_OPTIONS = {"before_options": "-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5", "options": "-vn"}
 
         self.vc = None
+        print("Success")
 
     def search_yt(self, item):
         with YoutubeDL(self.YDL_OPTIONS) as ydl:
             try:
-                info = ydl.extract_info("ytsearch:%$" % item, download=False)["entries"][0]
+                info = ydl.extract_info(f"ytsearch:{item}", download=False)["entries"][0]
             except Exception:
                 return False
         return {"source": info["url"], "title": info["title"]}
