@@ -11,7 +11,7 @@
 <body>
     <div id="create-container">
         <h2>Create new user</h2>
-        <form action="/newuser/success">
+        <form action="/userPage">
             <div class="info-group">
                 <label for="username">Username:</label><br>
                 <input type="text" id="username" name="username" required><br>

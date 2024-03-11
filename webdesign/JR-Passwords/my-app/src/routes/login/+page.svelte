@@ -11,7 +11,7 @@
 <body>
     <div id="login-container">
         <h2>Login</h2>
-        <form action="/login/success">
+        <form action="/userPage">
             <div class="login-group">
                 <label for="username">Username:</label><br>
                 <input type="text" id="username" name="username" required><br>
