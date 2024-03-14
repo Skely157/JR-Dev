@@ -6,16 +6,16 @@ class help_cog(commands.Cog):
         self.bot = bot
 
         self.help_message = """
-````
+```
 General commands:
-/help - display all the available commands
-/p <keywords> - finds the song on YouTube and plays it in your current channel. Will resume
-/q - displays the current music in queue
-/skip - skips the current song being played
-/clear - stops the music and clears the queue
-/leave - disconnected the bot from the voice channel
-/pause - pauses the current song being played or resumes if already paused
-/resume - resumes playing the current song
+?help - display all the available commands
+?p <keywords> - finds the song on YouTube and plays it in your current channel. Will resume
+?q - displays the current music in queue
+?skip - skips the current song being played
+?clear - stops the music and clears the queue
+?leave - disconnected the bot from the voice channel
+?pause - pauses the current song being played or resumes if already paused
+?resume - resumes playing the current song
 ```
 """
 
