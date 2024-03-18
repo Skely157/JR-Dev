@@ -10,7 +10,7 @@
         <h1 id="yourPasw">Your passwords:</h1>
         <div id="paswContainer">
             <div class="paswList" id="paswCard">
-                <PasswordCard/>
+                <PasswordCard />
             </div> 
             <div class="paswList" id="addPasw">
                 <AddPassword/>
@@ -26,6 +26,8 @@
         padding: 75px;
     }
     #paswContainer{
-        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 </style>

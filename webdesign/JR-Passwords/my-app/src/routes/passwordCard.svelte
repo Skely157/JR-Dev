@@ -1,5 +1,5 @@
 <style>
-    #main{
+    #passwordCard{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -7,21 +7,22 @@
         border-width: 3px;
         border-color: black;
         border-radius: 10px;
-    }
-    h2{
         padding: 10px;
     }
-    p{
-        padding: 5px;
+    #submit{
+        margin: 5px;
     }
 </style>
 
-<div id="main">
+
+<div id="passwordCard">
     <h2>Application</h2>
     <p>Username</p>
-    <p>**********</p>
-    <p>Icon</p>
-</div>
+    <p>Password <button>icon</button></p>
+    <button id="submit">Delete</button>
+ </div>
+
+ 
 
 <script>
 </script>
